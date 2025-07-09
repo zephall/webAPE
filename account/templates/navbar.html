@@ -1,0 +1,19 @@
+{% load static %}
+
+<header class="cabecera">
+  <a class="botones" href="/">
+    <img class="Logos" src="{% static 'media/LogoGobierno.png' %}" alt="Estado de Mexico" />
+    <span class="TextLogo">Chicoloapan</span>
+  </a>
+
+  <a class="botones" href="/">inicio</a>
+  <a class="botones" href="/reportes">Reportar Problemas</a>
+  <a class="botones" href="/login">Gestionar</a>
+
+  
+  {% if admin %}
+  <a class="botones" href="/fichas">fichas</a>
+  {% endif %}
+    
+
+</header>

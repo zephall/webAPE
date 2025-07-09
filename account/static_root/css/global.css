@@ -1,0 +1,152 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    overflow-y: visible;
+    overflow-x: hidden;
+    --sb-track-color: #250404;
+    --sb-thumb-color: #560a15;
+    --sb-size: 10px;
+    height: 100%;
+}
+
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+
+
+.cabecera {
+    display: flex;
+    background-color: #ab4141;
+    height: 60px;
+    justify-content: space-evenly;
+}
+
+.cabecera a {
+    justify-self: start;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+}
+
+.botones {
+    text-decoration: none;
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: rgb(145, 16, 16);
+    margin: 10px;
+    height: 100%;
+    width: 20%;
+    /* justify-content; */
+    transition: all ease-in-out .2s;
+    text-transform: uppercase;
+    text-decoration: underline overline rgb(231, 105, 105);
+    text-underline-offset: 10px;
+}
+
+.botones:hover {
+    background-color: rgba(69, 8, 8, 0.515);
+}
+
+.Logos {
+    max-width: 50px;
+    max-height: 80px;
+    padding: 5px;
+    justify-self: start;
+}
+
+.TextLogo {
+    overflow: auto;
+}
+
+/* Oculta el texto en pantallas pequeñas */
+@media (max-width: 600px) {
+    .TextLogo {
+        display: none;
+    }
+}
+
+.column {
+    float: left;
+    position: relative;
+    width: 600px;
+    background-color: rgb(216, 216, 216);
+    border-radius: 20px;
+    margin: 30px;
+}
+
+
+
+.foot {
+    background: rgb(116, 36, 36);
+    height: 85px;
+    border-top: 2px solid rgba(0, 0, 0, 0.24);
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Clear floats after the columns */
+/* .row:after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+.column2 {
+    /* background-color: rgb(146, 26, 26); */
+    color: white;
+    width: 20%;
+    margin: 5px;
+    text-align: center;
+    /* border-radius: 20px; */
+    /* margin: 30px; */
+}
+
+.column2 span {
+    font-size: 14px;
+    margin: 0px;
+}
+
+.intro {
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    /* margin: 20px; */
+    /* height: %; */
+    width: 100%;
+}
+
+.banner {
+    width: 50%;
+    position: relative;
+    /* padding: 10px; */
+}
+
+.titulos {
+    text-align: center;
+    padding-top: 10px;
+}

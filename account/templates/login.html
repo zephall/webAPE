@@ -1,0 +1,43 @@
+{% load static %}
+
+<style>
+  .cuerpo {
+    justify-content: center;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    justify-items: center;
+    align-content: center;
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'head.html' %}
+  <body>
+    {% include 'navbar.html' %}
+
+    <div class="cuerpo">
+      <form class="login" method="post">
+        {% csrf_token %}
+        <h2>Iniciar sesión</h2>
+        <div class="form-group">
+          {{ form.username }}
+        </div>
+        <div class="form-group">
+          {{ form.password }}
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+    {% comment %} <div class="row">
+      {% endcomment %}
+
+      {% comment %}
+    </div> {% endcomment %}
+
+    {% include 'footer.html' %}
+  </body>
+</html>
